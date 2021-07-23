@@ -1,0 +1,528 @@
+﻿* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'PT Sans', sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+nav ul,
+.main-info-section,
+.work-category {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+body {
+	background-color: #E4E9F5;
+	color: #181818;
+}
+
+.navbar {
+	background-color: #9DA4DD;
+	width: 100%;
+	z-index: 100;
+	position: fixed;
+	left: 0;
+	right: 0;
+	transition: .4s;
+}
+
+header {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.header-left {
+	display: block;
+}
+
+header h1,
+header a {
+	color: #03082E;
+	transition: .4s;
+}
+
+header h1:hover,
+header a:hover {
+	color: #7C84C2;
+}
+
+.lgo h1 a {
+	font-size: 1em;
+	text-transform: none;
+	padding: 20px 0;
+}
+
+nav ul {
+	height: 100%;
+}
+
+li {
+	list-style: none;
+	transition: .4s;
+}
+
+li:hover {
+	background-color: #C5D0EB;
+}
+
+a {
+	display: flex;
+	text-decoration: none;
+	font-size: .9rem;
+	text-transform: uppercase;
+	padding: 30px 0;
+	text-align: center;
+	width: 100%;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.home h1,
+.home p {
+	text-align: center;
+}
+
+.home h1 {
+	opacity: .6;
+	margin-bottom: 20px;
+}
+
+.home p em {
+	font-size: 1.7rem;
+	color: #03082E;
+}
+
+.main {
+	margin-top: 35px;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height: 330px;
+}
+
+.main h1 {
+	border-radius: 4px;
+	height: 100%;
+	transition: .4s;
+}
+.main h1:hover {
+	background-color: #C5D0EB;
+}
+
+.main a {
+	color: #707070;
+	height: 100%;
+	text-align: center;
+	padding: 155px 0;
+}
+	.main a:hover {
+		color: #03082E;
+	}
+
+.normal h1 {
+	opacity: .5;
+	transition: .4s;
+}
+
+.normal h1:hover {
+	opacity: .9;
+	color: #03082E;
+}
+
+form input,
+form select {
+	display: block;
+	padding: 10px;
+	background-color: #C5D0EB;
+	border: 3px solid #707070;
+	margin: 20px 0;
+	outline: none;
+	font-size: 1.1rem;
+	color: #03082E;
+	position: relative;
+	left: 80%;
+	right: 30%;
+	transform: translateX(-50%);
+}
+
+form input:last-child,
+form input:nth-last-child(2) {
+	width: 150px;
+	background-color: none;
+	border: 1px solid #03082E;
+	box-sizing: border-box;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: opacity .3s;
+}
+form input:last-child:hover,
+form input:nth-last-child(2):hover {
+	opacity: .5;
+}
+
+.footer hr {
+	border: 2px solid;
+	margin-top: 80px;
+}
+
+.footer p {
+	text-align: center;
+	font-size: 1.2rem;
+	padding: 30px 0;
+}
+
+.resultado {
+	display: none;
+	width: 70%;
+	margin: 20px 15% 10px 15%;
+	background-color: #ffd5ff;
+	text-align: center;
+	padding: 15px;
+	border: 2px solid #ED55ED;
+}
+
+tbody, tr, .normal {
+	overflow: auto;
+}
+
+.tabela-crud {
+	width: 100%;
+	text-align: center;
+	border: 3px solid #000B5E;
+}
+
+.tabela-crud tr:first-child {
+	font-weight: bold;
+	font-size: 25px;
+}
+
+
+.tabela-crud tr:nth-child(2n -1) {
+	background-color: #C3CAD9;
+}
+
+
+.tabela-crud tr:nth-child(2n) {
+	color: #707070;
+}
+
+
+.tabela-crud td {
+	width: 16.66%;
+	height: 50px;
+}
+
+.tabela-crud td a {
+	display: inline-block;
+	color: #0A7D0E;
+	width: min-content;
+	padding: 4px;
+}
+
+.tabela-crud td a:last-child {
+	color: #7D0A0A;
+}
+
+.value-total {
+	margin: 30px 0;
+	overflow: auto;
+	background-color: #9DA4DD;
+	box-shadow: 0 0 1.2rem rgb(0 0 0 / 25%);
+	position: relative;
+}
+
+.title {
+	display: flex;
+}
+.title:first-child {
+	padding: 10px 0;
+}
+
+.title:last-child {
+	padding: 10px 0;
+}
+
+.title p:first-child{
+	font-size: 21px;
+	font-weight: bold;
+}
+
+.title p:last-child{
+	padding: 5px;
+}
+
+.title p {
+	width: 50%;
+	text-align: center;
+	color: #03082E;
+}
+
+@media screen and (max-width: 480px) {
+	.container {
+		padding: 0 15px 0 15px;
+	}
+
+	.navbar {
+		width: 100%;
+		bottom: 0;
+		padding: 0;
+	}
+
+	.lgo,
+	.aLeftbar {
+		display: none;
+	}
+
+	nav {
+		width: 100%;
+	}
+
+	li {
+		width: 33.33%;
+	}
+
+	a {
+		font-size: .75rem;
+	}
+
+	.home {
+		margin-top: 50px;
+	}
+
+	.home h1 {
+		font-size: 2rem;
+	}
+
+	.main h1 {
+		width: 48%;
+	}
+
+	.main a {
+		border: groove;
+		font-size: .7em;
+	}
+
+	.normal {
+		margin-top: 10px;
+	}
+
+	.normal h1 {
+		text-align: center;
+	}
+
+	form input,
+	form select {
+		width: 200px;
+		left: 50%;
+		right: 50%;
+	}
+
+	.value-total {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+	.container {
+		padding: 0 20px 0 20px;
+	}
+
+	.navbar {
+		width: 100%;
+		bottom: 0;
+		padding: 0;
+	}
+
+	.lgo,
+	.aLeftbar {
+		display: none;
+	}
+
+	nav {
+		width: 100%;
+	}
+
+	li {
+		width: 33.33%;
+	}
+
+	.home {
+		margin-top: 50px;
+	}
+
+	.home h1 {
+		font-size: 2.4rem;
+	}
+
+	.main h1 {
+		width: 48%;
+	}
+
+	.main a {
+		font-size: 1em;
+	}
+
+	.normal {
+		margin-top: 10px;
+	}
+
+	.normal h1 {
+		text-align: center;
+		font-size: 3rem;
+	}
+
+	form input,
+	form select {
+		width: 250px;
+		left: 50%;
+		right: 50%;
+	}
+
+	.value-total {
+		width: 40%;
+		left: 60%;
+		right: 50%;
+	}
+}
+
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+	.container {
+		padding: 0 10px 0 10px;
+	}
+
+	.navbar {
+		top: 0;
+	}
+
+	li {
+		list-style: none;
+		width: 120px;
+		transition: .4s;
+	}
+
+	.home {
+		margin-top: 75px;
+	}
+
+	.home h1 {
+		font-size: 2.4rem;
+	}
+
+	.main h1 {
+		width: 48%;
+	}
+
+	.main a {
+		font-size: 1em;
+	}
+
+	.normal {
+		margin-top: 100px;
+	}
+
+	.normal h1 {
+		text-align: right;
+		font-size: 4rem;
+		margin-right: 5%;
+	}
+
+	form input,
+	form select {
+		width: 300px;
+	}
+
+	.value-total {
+		width: 25%;
+		left: 75%;
+		right: 50%;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.container {
+		padding: 0 100px 0 100px;
+	}
+
+	.main {
+		padding: 0 10%;
+	}
+
+	.navbar {
+		top: 0;
+	}
+
+	.navbar.sticky {
+		position: fixed;
+		left: 0;
+		right: 0;
+		width: 100%;
+		transition: .4s;
+		padding: 10px 130px;
+	}
+
+	.navbar.sticky h1 {
+		color: #707070;
+		transition: .6s;
+	}
+
+	.navbar.sticky a {
+		transition: .6s;
+	}
+
+	li {
+		list-style: none;
+		width: 150px;
+		transition: .4s;
+	}
+
+	.home {
+		margin-top: 100px;
+	}
+
+	.home h1 {
+		font-size: 3rem;
+	}
+
+	.main h1 {
+		width: 45%;
+	}
+
+	.main a {
+		font-size: 1em;
+	}
+
+	.normal {
+		margin-top: 100px;
+	}
+
+	.normal h1 {
+		text-align: right;
+		font-size: 7rem;
+	}
+
+	form input,
+	form select {
+		width: 500px;
+	}
+
+	.value-total {
+		width: 25%;
+		left: 75%;
+		right: 50%;
+	}
+}
+
+.show {
+	display: block;
+}
+
+.remove {
+	display: none;
+}
